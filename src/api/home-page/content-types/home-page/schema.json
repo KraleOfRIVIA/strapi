@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "HomePage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "under-header.hero",
+        "info.about",
+        "models.testimonials"
+      ]
+    }
+  }
+}

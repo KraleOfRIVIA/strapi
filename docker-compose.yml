@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  strapi:
+    build: .
+    container_name: strapi_app
+    ports:
+      - "1337:1337"
+    volumes:
+      - .:/app        # позволяет редактировать код на хосте и видеть изменения в контейнере
+      - /app/node_modules
+    environment:
+      NODE_ENV: development
+    restart: unless-stopped
